@@ -1,0 +1,8 @@
+pypdf
+langchain
+langgraph
+langchain_community
+langchain-openai
+tiktoken
+streamlit
+asyncio
