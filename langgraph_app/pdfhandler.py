@@ -7,6 +7,6 @@ def read_pdf_to_docs(file):
     docs = []
     for idx, page in enumerate(reader.pages):
         text = page.extract_text()
-        doc = Document(text, metadata={"page_number": idx + 1})
+        doc = Document(page_content=text, metadata={"page_number": idx + 1})
         docs.append(doc)
     return docs
