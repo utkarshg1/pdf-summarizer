@@ -1,8 +1,7 @@
 import streamlit as st
 import os
-from langgraph_app.pdfhandler import read_pdf_to_docs
+from langgraph_app.pdfhandler import read_pdf_to_docs, get_splits
 from langgraph_app.summarizer import get_app, get_summary
-from langgraph_app.utils import get_splits
 
 # Set Openai API Key
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
