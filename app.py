@@ -22,6 +22,7 @@ if uploaded_file:
     docs = read_pdf_to_docs(uploaded_file)
     split_docs = get_splits(docs=docs, chunk_size=1000)
     st.write(f"Split docs length : {len(split_docs)}")
-    app = get_app()
-    summary = get_summary(app, split_docs)
+    with st.spinner():
+        app = get_app()
+        summary = get_summary(app, split_docs)
     st.write(summary)
